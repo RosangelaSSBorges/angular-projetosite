@@ -1,5 +1,5 @@
 import { newArray } from '@angular/compiler/src/util';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-numeros',
@@ -7,15 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./numeros.component.css']
 })
 export class NumerosComponent implements OnInit {
-  n =  100 * Math.random();
+  @Input() n: number;
   
 
-  constructor() { 
+  constructor() {}
+  ngOnInit() {}
+
+    getNumerosComponent(){
+    let list: number[] = [];
+    for (let i = 1; i <= this.n; i++) {
+      list.push(10 * Math.random());
+    }
+    return list;
      
 
   }
 
-  ngOnInit() {
-  }
+  
 
 }
