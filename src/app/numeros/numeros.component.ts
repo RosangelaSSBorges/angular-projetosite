@@ -1,3 +1,4 @@
+import { newArray } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./numeros.component.css']
 })
 export class NumerosComponent implements OnInit {
+  n =  100 * Math.random();
+  
 
-  constructor() { }
+  constructor() { 
+     
+
+  }
 
   ngOnInit() {
   }
