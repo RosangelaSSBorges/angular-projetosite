@@ -7,7 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./numeros.component.css']
 })
 export class NumerosComponent implements OnInit {
-  @Input() n: number;
+  n: number = 10
+  ;
+  
   
 
   constructor() {}
